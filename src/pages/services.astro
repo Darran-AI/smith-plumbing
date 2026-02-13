@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const services = [
+  {
+    title: "Emergency Plumbing",
+    description: "When a plumbing disaster strikes, every minute counts. Our emergency team is on standby around the clock to deal with burst pipes, major leaks, and flooding across Greater Manchester. We aim to reach your property within the hour, equipped to diagnose and fix the problem on the spot. No call-out charge, no inflated emergency rates — just fast, reliable service when you need it most.",
+    includes: [
+      "Burst pipe repair and isolation",
+      "Emergency leak detection and repair",
+      "Flood damage response and water extraction",
+      "Temporary fixes and permanent solutions",
+    ],
+    color: "bg-brand-primary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  },
+  {
+    title: "Bathroom Installation",
+    description: "Transform your bathroom from dated to dazzling with our complete installation service. We manage the entire project from initial design consultation through to the final finishing touches, coordinating plumbing, tiling, and fixture fitting seamlessly. Whether it's a compact en-suite or a spacious family bathroom, we deliver high-quality results on time and on budget.",
+    includes: [
+      "Full bathroom design and planning",
+      "Suite supply and installation",
+      "Plumbing, tiling, and electrical coordination",
+      "Wet room and accessible bathroom fitting",
+    ],
+    color: "bg-brand-secondary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/><path d="M12 6v6"/></svg>`,
+  },
+  {
+    title: "Boiler Repair & Servicing",
+    description: "A well-maintained boiler keeps your home warm, safe, and energy-efficient. Our Gas Safe registered engineers service, repair, and install all major boiler brands including Worcester Bosch, Vaillant, and Baxi. We carry common parts in our vans so most repairs are completed in a single visit, getting your heating and hot water back up and running quickly.",
+    includes: [
+      "Annual boiler servicing and safety checks",
+      "Fault diagnosis and same-day repairs",
+      "New boiler installation and upgrades",
+      "Landlord gas safety certificates (CP12)",
+    ],
+    color: "bg-brand-primary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>`,
+  },
+  {
+    title: "Central Heating Systems",
+    description: "Whether you need a brand-new central heating system or your existing setup needs attention, our engineers have the expertise to help. We design and install full heating systems tailored to your property, ensuring even heat distribution and optimal energy efficiency. From radiator upgrades to complete system overhauls, we keep Manchester homes warm all winter long.",
+    includes: [
+      "Full central heating system design and install",
+      "Radiator replacement and balancing",
+      "Thermostat and smart controls fitting",
+      "Powerflush and system cleansing",
+    ],
+    color: "bg-brand-secondary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5c0 4 5 8 5 11a5 5 0 0 0 5-5c0-4-5-8-5-11z"/><path d="M12 18v4"/></svg>`,
+  },
+  {
+    title: "Drain Unblocking",
+    description: "Blocked drains are unpleasant and can cause serious damage if left untreated. We use professional high-pressure jetting equipment and CCTV drain cameras to locate and clear blockages quickly. From slow-running kitchen sinks to fully blocked external drains, we restore proper drainage and can advise on preventative measures to stop the problem recurring.",
+    includes: [
+      "High-pressure water jetting",
+      "CCTV drain surveys and diagnostics",
+      "Internal and external drain clearing",
+      "Root ingress removal and drain relining",
+    ],
+    color: "bg-brand-primary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>`,
+  },
+  {
+    title: "Kitchen Plumbing",
+    description: "A kitchen refit isn't complete without reliable plumbing. We handle everything from tap installations and sink replacements to dishwasher and washing machine connections. Working independently or alongside your kitchen fitter, we ensure all pipework is neat, compliant, and leak-free. We also tackle everyday kitchen plumbing issues like dripping taps and low water pressure.",
+    includes: [
+      "Sink and tap installation or replacement",
+      "Dishwasher and appliance connections",
+      "Waste disposal unit fitting",
+      "Pipework rerouting for new kitchen layouts",
+    ],
+    color: "bg-brand-secondary",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><line x1="12" y1="13" x2="12" y2="13.01"/></svg>`,
+  },
+];
+---
+
+<Layout title="Services" description="Professional plumbing services in Manchester. Emergency plumbing, bathroom installation, boiler repair, central heating, drain unblocking and more.">
+
+  <!-- Hero Banner -->
+  <section class="relative flex min-h-[40vh] items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-brand-dark" aria-hidden="true">
+      <div class="absolute inset-0 opacity-100" style="background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(27,77,142,0.6), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(27,77,142,0.35), transparent),
+        linear-gradient(180deg, #0a1e38 0%, #0F2B4C 40%, #132d4a 100%);">
+      </div>
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image:
+        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 40px 40px;">
+      </div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-sm text-blue-200/60" aria-label="Breadcrumb">
+        <ol class="flex items-center justify-center gap-2">
+          <li><a href="/" class="transition-colors hover:text-white">Home</a></li>
+          <li aria-hidden="true">&rsaquo;</li>
+          <li class="text-white font-medium">Services</li>
+        </ol>
+      </nav>
+
+      <div class="mx-auto mb-6 h-1 w-16 rounded-full bg-brand-secondary"></div>
+      <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
+        Our Services
+      </h1>
+      <p class="mt-4 text-lg text-blue-200/80 sm:text-xl">
+        Professional plumbing solutions for every situation
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Sections -->
+  {services.map((service, i) => (
+    <section class={`py-16 sm:py-24 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class={`flex flex-col items-center gap-10 lg:gap-16 ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
+
+          <!-- Text -->
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-brand-dark sm:text-3xl">{service.title}</h2>
+            <div class="mt-3 h-1 w-12 rounded-full bg-brand-secondary"></div>
+            <p class="mt-4 leading-relaxed text-gray-600 sm:text-lg">
+              {service.description}
+            </p>
+
+            <ul class="mt-6 space-y-3">
+              {service.includes.map((item) => (
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-5 w-5 shrink-0 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="/contact"
+              class="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-all hover:bg-brand-dark hover:shadow-md"
+            >
+              Get a Quote
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Placeholder panel -->
+          <div class="flex-1 w-full">
+            <div class={`flex aspect-[4/3] items-center justify-center rounded-2xl ${service.color} text-white/30`}>
+              <Fragment set:html={service.icon.replace('class="h-8 w-8"', 'class="h-20 w-20"')} />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- CTA Banner -->
+  <CtaBanner />
+
+</Layout>

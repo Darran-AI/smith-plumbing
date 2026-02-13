@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smith-plumbing.netlify.app/sitemap-index.xml
