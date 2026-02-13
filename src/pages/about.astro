@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CtaBanner from "../components/CtaBanner.astro";
+import { Image } from "astro:assets";
+import vanImage from "../assets/images/van.jpg";
 ---
 
 <Layout title="About" description="Family-run plumbing business serving Manchester since 2005. Gas Safe registered, 8 qualified plumbers, thousands of satisfied customers.">
@@ -42,22 +44,40 @@ import CtaBanner from "../components/CtaBanner.astro";
 
   <!-- Our Story -->
   <section class="bg-white py-20 sm:py-28">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Our Story</h2>
         <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-brand-secondary"></div>
       </div>
 
-      <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-600">
-        <p>
-          Smith Plumbing started in 2005 when John Smith, a newly qualified plumber with a toolbox and a second-hand van, decided to go it alone. After years working for larger firms across Manchester, John wanted to offer something different: honest pricing, reliable timekeeping, and the kind of personal service that only comes from someone who genuinely cares about doing a good job. Word spread quickly, and within two years the diary was fully booked weeks in advance.
-        </p>
-        <p>
-          As demand grew, so did the team. John brought on his first apprentice in 2008, and by 2012 Smith Plumbing had expanded to a team of four, working across Greater Manchester from a small workshop in Salford. The company earned its Gas Safe registration early on and has maintained an impeccable safety record ever since. Every engineer who joins the team goes through rigorous training and shares the same commitment to quality that John built the business on.
-        </p>
-        <p>
-          Today, Smith Plumbing is a team of eight qualified plumbers and a dedicated operations manager, serving thousands of homes and businesses across Manchester, Stockport, Trafford, and beyond. We've fitted hundreds of bathrooms, serviced thousands of boilers, and answered countless emergency calls — including more than a few on Christmas Day. We're still family-run, still Manchester-based, and still driven by the same values John started with over twenty years ago.
-        </p>
+      <div class="mt-12 flex flex-col items-center gap-10 lg:flex-row lg:gap-16">
+        <!-- Text -->
+        <div class="flex-1 space-y-6 text-lg leading-relaxed text-gray-600">
+          <p>
+            Smith Plumbing started in 2005 when John Smith, a newly qualified plumber with a toolbox and a second-hand van, decided to go it alone. After years working for larger firms across Manchester, John wanted to offer something different: honest pricing, reliable timekeeping, and the kind of personal service that only comes from someone who genuinely cares about doing a good job. Word spread quickly, and within two years the diary was fully booked weeks in advance.
+          </p>
+          <p>
+            As demand grew, so did the team. John brought on his first apprentice in 2008, and by 2012 Smith Plumbing had expanded to a team of four, working across Greater Manchester from a small workshop in Salford. The company earned its Gas Safe registration early on and has maintained an impeccable safety record ever since. Every engineer who joins the team goes through rigorous training and shares the same commitment to quality that John built the business on.
+          </p>
+          <p>
+            Today, Smith Plumbing is a team of eight qualified plumbers and a dedicated operations manager, serving thousands of homes and businesses across Manchester, Stockport, Trafford, and beyond. We've fitted hundreds of bathrooms, serviced thousands of boilers, and answered countless emergency calls — including more than a few on Christmas Day. We're still family-run, still Manchester-based, and still driven by the same values John started with over twenty years ago.
+          </p>
+        </div>
+
+        <!-- Van image -->
+        <div class="w-full flex-1 lg:max-w-md">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              src={vanImage}
+              alt="Smith Plumbing branded van parked outside a customer's home"
+              class="w-full object-cover"
+              widths={[400, 640, 800]}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              loading="lazy"
+              quality={80}
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>

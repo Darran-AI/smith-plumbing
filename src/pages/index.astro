@@ -2,26 +2,32 @@
 import Layout from "../layouts/Layout.astro";
 import CtaBanner from "../components/CtaBanner.astro";
 import { siteConfig } from "../site.config";
+import { Image } from "astro:assets";
+import heroImage from "../assets/images/plumber-working.jpg";
 ---
 
 <Layout title="Smith Plumbing" description="Smith Plumbing - trusted plumbers in Manchester since 2005. 24/7 emergency callouts, free quotes, no call-out charge. Call 0161 555 0199.">
 
   <!-- Hero -->
   <section class="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
-    <!-- Background: dark navy base with soft spotlight from top centre -->
-    <div class="absolute inset-0" style="background: #070f1a;" aria-hidden="true">
+    <!-- Background image -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <Image
+        src={heroImage}
+        alt="Plumber working on pipes"
+        class="h-full w-full object-cover"
+        widths={[640, 1024, 1536, 2048]}
+        sizes="100vw"
+        loading="eager"
+        quality={80}
+      />
+      <!-- Dark gradient overlay for text readability -->
       <div class="absolute inset-0" style="background:
-        radial-gradient(ellipse 70% 60% at 50% -5%, rgba(27,77,142,0.7), transparent 70%),
-        radial-gradient(ellipse 50% 35% at 50% 0%, rgba(27,77,142,0.4), transparent 60%),
-        radial-gradient(ellipse 40% 30% at 80% 110%, rgba(27,77,142,0.2), transparent),
-        radial-gradient(circle at 15% 60%, rgba(232,163,23,0.06), transparent 50%),
-        linear-gradient(180deg, #0a1628 0%, #0d1f35 50%, #0a1628 100%);">
+        linear-gradient(180deg, rgba(7,15,26,0.85) 0%, rgba(7,15,26,0.7) 40%, rgba(7,15,26,0.8) 70%, rgba(7,15,26,0.95) 100%);">
       </div>
-      <!-- Subtle grid pattern overlay -->
-      <div class="absolute inset-0 opacity-[0.03]" style="background-image:
-        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-        background-size: 48px 48px;">
+      <!-- Subtle blue spotlight -->
+      <div class="absolute inset-0" style="background:
+        radial-gradient(ellipse 70% 60% at 50% -5%, rgba(27,77,142,0.3), transparent 70%);">
       </div>
     </div>
 

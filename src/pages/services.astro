@@ -1,6 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CtaBanner from "../components/CtaBanner.astro";
+import { Image } from "astro:assets";
+import plumberWorking from "../assets/images/plumber-working.jpg";
+import modernBathroom from "../assets/images/modern-bathroom.jpg";
+import boiler from "../assets/images/boiler.jpg";
+import modernKitchen from "../assets/images/modern-kitchen.jpg";
+
+const images: Record<string, { src: ImageMetadata; alt: string }> = {
+  "Emergency Plumbing": { src: plumberWorking, alt: "Plumber fixing an emergency pipe leak" },
+  "Bathroom Installation": { src: modernBathroom, alt: "Modern bathroom with walk-in shower and white tiles" },
+  "Boiler Repair & Servicing": { src: boiler, alt: "Gas boiler being serviced by a qualified engineer" },
+  "Kitchen Plumbing": { src: modernKitchen, alt: "Modern kitchen with professional plumbing installation" },
+};
 
 const services = [
   {
@@ -147,11 +159,25 @@ const services = [
             </a>
           </div>
 
-          <!-- Placeholder panel -->
+          <!-- Image or placeholder panel -->
           <div class="flex-1 w-full">
-            <div class={`flex aspect-[4/3] items-center justify-center rounded-2xl ${service.color} text-white/30`}>
-              <Fragment set:html={service.icon.replace('class="h-8 w-8"', 'class="h-20 w-20"')} />
-            </div>
+            {images[service.title] ? (
+              <div class="overflow-hidden rounded-2xl shadow-lg">
+                <Image
+                  src={images[service.title].src}
+                  alt={images[service.title].alt}
+                  class="aspect-[4/3] w-full object-cover"
+                  widths={[400, 640, 800]}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  quality={80}
+                />
+              </div>
+            ) : (
+              <div class={`flex aspect-[4/3] items-center justify-center rounded-2xl ${service.color} text-white/30`}>
+                <Fragment set:html={service.icon.replace('class="h-8 w-8"', 'class="h-20 w-20"')} />
+              </div>
+            )}
           </div>
 
         </div>
