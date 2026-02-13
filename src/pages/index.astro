@@ -7,64 +7,67 @@ import { siteConfig } from "../site.config";
 <Layout title="Smith Plumbing" description="Smith Plumbing - trusted plumbers in Manchester since 2005. 24/7 emergency callouts, free quotes, no call-out charge. Call 0161 555 0199.">
 
   <!-- Hero -->
-  <section class="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
-    <!-- Background: layered CSS gradients for a dark textured look -->
-    <div class="absolute inset-0 bg-brand-dark" aria-hidden="true">
-      <div class="absolute inset-0 opacity-100" style="background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(27,77,142,0.6), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(27,77,142,0.35), transparent),
-        radial-gradient(circle at 20% 60%, rgba(232,163,23,0.08), transparent 50%),
-        linear-gradient(180deg, #0a1e38 0%, #0F2B4C 40%, #132d4a 100%);">
+  <section class="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+    <!-- Background: dark navy base with soft spotlight from top centre -->
+    <div class="absolute inset-0" style="background: #070f1a;" aria-hidden="true">
+      <div class="absolute inset-0" style="background:
+        radial-gradient(ellipse 70% 60% at 50% -5%, rgba(27,77,142,0.7), transparent 70%),
+        radial-gradient(ellipse 50% 35% at 50% 0%, rgba(27,77,142,0.4), transparent 60%),
+        radial-gradient(ellipse 40% 30% at 80% 110%, rgba(27,77,142,0.2), transparent),
+        radial-gradient(circle at 15% 60%, rgba(232,163,23,0.06), transparent 50%),
+        linear-gradient(180deg, #0a1628 0%, #0d1f35 50%, #0a1628 100%);">
       </div>
       <!-- Subtle grid pattern overlay -->
-      <div class="absolute inset-0 opacity-[0.04]" style="background-image:
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image:
         linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-        background-size: 40px 40px;">
+        background-size: 48px 48px;">
       </div>
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
+    <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
       <!-- Accent line -->
-      <div class="mx-auto mb-6 h-1 w-16 rounded-full bg-brand-secondary"></div>
+      <div class="mx-auto mb-8 h-1 w-20 rounded-full bg-brand-secondary"></div>
 
-      <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+      <h1 class="text-4xl font-extrabold tracking-tight leading-[1.1] text-white sm:text-5xl md:text-6xl lg:text-7xl">
         {siteConfig.name}
       </h1>
 
-      <p class="mt-4 text-lg font-medium text-blue-200/80 sm:mt-6 sm:text-xl md:text-2xl">
+      <p class="mt-5 text-lg font-medium text-blue-200/80 sm:mt-7 sm:text-xl md:text-2xl">
         {siteConfig.tagline}
       </p>
 
       <!-- CTA Buttons -->
-      <div class="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:justify-center">
+      <div class="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:justify-center">
         <a
           href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-          class="group inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-white px-7 py-3.5 text-base font-bold text-brand-dark shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl sm:w-auto sm:text-lg"
+          class="group inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-white px-8 py-4 text-base font-bold text-brand-dark shadow-lg shadow-white/10 transition-all duration-300 hover:bg-gray-50 hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 sm:w-auto sm:text-lg"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call Now: {siteConfig.phone}
         </a>
         <a
           href="/contact"
-          class="inline-flex w-full items-center justify-center rounded-lg border-2 border-white/30 px-7 py-3.5 text-base font-semibold text-white transition-all hover:border-white hover:bg-white/10 sm:w-auto sm:text-lg"
+          class="inline-flex w-full items-center justify-center rounded-lg border-2 border-white/25 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10 hover:-translate-y-0.5 sm:w-auto sm:text-lg"
         >
           Get a Free Quote
         </a>
       </div>
 
       <!-- Trust Bar -->
-      <div class="mt-10 flex flex-col items-center gap-3 text-sm text-blue-200/70 sm:mt-14 sm:flex-row sm:justify-center sm:gap-6 sm:text-base">
-        <span class="flex items-center gap-1.5">
+      <div class="mt-12 flex flex-col items-center gap-4 text-sm text-blue-200/70 sm:mt-16 sm:flex-row sm:justify-center sm:gap-0 sm:text-base">
+        <span class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
           Gas Safe Registered
         </span>
-        <span class="flex items-center gap-1.5">
+        <span class="hidden h-4 w-px bg-white/20 sm:mx-6 sm:block" aria-hidden="true"></span>
+        <span class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
           24/7 Emergency Callouts
         </span>
-        <span class="flex items-center gap-1.5">
+        <span class="hidden h-4 w-px bg-white/20 sm:mx-6 sm:block" aria-hidden="true"></span>
+        <span class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
           No Call-Out Charge
         </span>
@@ -72,115 +75,109 @@ import { siteConfig } from "../site.config";
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
+    <div class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
       <div class="animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
       </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section class="bg-brand-light py-16 sm:py-24">
+  <section class="bg-brand-light py-20 sm:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Heading -->
       <div class="text-center">
-        <h2 class="text-3xl font-bold text-brand-dark sm:text-4xl">Our Services</h2>
-        <div class="mx-auto mt-3 h-1 w-12 rounded-full bg-brand-secondary"></div>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+        <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Our Services</h2>
+        <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-brand-secondary"></div>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-600">
           Professional plumbing solutions for homes and businesses across Manchester
         </p>
       </div>
 
       <!-- Grid -->
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
 
         <!-- Emergency Plumbing -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Emergency Plumbing</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Burst pipes, leaks, or flooding? Our emergency team is available around the clock to tackle urgent plumbing problems. We aim to be at your door within the hour across Manchester.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
         <!-- Bathroom Installation -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/><path d="M12 6v6"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/><path d="M12 6v6"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Bathroom Installation</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             From modern en-suites to full bathroom renovations, we handle every detail. Our fitters manage plumbing, tiling, and fixtures for a complete, hassle-free transformation.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
         <!-- Boiler Repair & Servicing -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Boiler Repair & Servicing</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Keep your boiler running safely and efficiently with our Gas Safe registered engineers. We service, repair, and install all major boiler brands with competitive fixed pricing.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
         <!-- Central Heating Systems -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5c0 4 5 8 5 11a5 5 0 0 0 5-5c0-4-5-8-5-11z"/><path d="M12 18v4"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5c0 4 5 8 5 11a5 5 0 0 0 5-5c0-4-5-8-5-11z"/><path d="M12 18v4"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Central Heating Systems</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Whether you need a new central heating system or repairs to an existing one, we've got you covered. We install radiators, thermostats, and full heating systems to keep your home warm.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
         <!-- Drain Unblocking -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Drain Unblocking</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Slow drains and blockages cleared quickly using professional equipment. We tackle everything from kitchen sinks to external drainage with CCTV surveys for persistent problems.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
         <!-- Kitchen Plumbing -->
-        <a href="/services" class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-          <div class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand-secondary transition-transform duration-300 group-hover:scale-x-100"></div>
-          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><line x1="12" y1="13" x2="12" y2="13.01"/></svg>
+        <a href="/services" class="group rounded-xl border-t-[3px] border-brand-primary bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><line x1="12" y1="13" x2="12" y2="13.01"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Kitchen Plumbing</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Tap replacements, dishwasher connections, sink installations, and more. We work with your kitchen fitter or independently to deliver clean, reliable plumbing every time.
           </p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-secondary">
-            Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 group-hover:text-brand-secondary">
+            Learn More <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </a>
 
@@ -189,57 +186,57 @@ import { siteConfig } from "../site.config";
   </section>
 
   <!-- Why Choose Us -->
-  <section class="bg-white py-16 sm:py-24">
+  <section class="bg-brand-light py-20 sm:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Heading -->
       <div class="text-center">
-        <h2 class="text-3xl font-bold text-brand-dark sm:text-4xl">Why Choose Smith Plumbing?</h2>
-        <div class="mx-auto mt-3 h-1 w-12 rounded-full bg-brand-secondary"></div>
+        <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Why Choose Smith Plumbing?</h2>
+        <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-brand-secondary"></div>
       </div>
 
       <!-- Feature blocks -->
-      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
         <!-- 20+ Years Experience -->
         <div class="text-center">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+          <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary text-white shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">20+ Years Experience</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Serving Manchester homes and businesses with trusted, reliable plumbing expertise since 2005.
           </p>
         </div>
 
         <!-- Gas Safe Registered -->
         <div class="text-center">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary text-white shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Gas Safe Registered</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Fully certified engineers you can trust for all gas and boiler work, giving you complete peace of mind.
           </p>
         </div>
 
         <!-- Fixed Price Quotes -->
         <div class="text-center">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary text-white shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">Fixed Price Quotes</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             No hidden fees or surprise charges. We quote upfront so you know exactly what you'll pay before work begins.
           </p>
         </div>
 
         <!-- 24/7 Emergency Service -->
         <div class="text-center">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-light text-brand-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary text-white shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <h3 class="text-lg font-bold text-brand-dark">24/7 Emergency Service</h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">
             Plumbing emergencies don't wait, and neither do we. Call any time, day or night, and we'll be there fast.
           </p>
         </div>
@@ -247,23 +244,23 @@ import { siteConfig } from "../site.config";
       </div>
 
       <!-- Testimonial -->
-      <div class="mx-auto mt-16 max-w-3xl text-center">
-        <div class="relative rounded-2xl bg-brand-light px-6 py-10 sm:px-12 sm:py-14">
-          <!-- Large quote mark -->
-          <span class="absolute -top-5 left-6 text-8xl font-serif leading-none text-brand-primary/20 sm:left-10 sm:-top-6 sm:text-9xl" aria-hidden="true">&ldquo;</span>
+      <div class="mx-auto mt-20 max-w-3xl text-center">
+        <div class="relative rounded-2xl border border-gray-200/60 bg-white px-8 py-12 shadow-md sm:px-14 sm:py-16">
+          <!-- Large decorative quote mark -->
+          <span class="absolute -top-8 left-8 text-[10rem] font-serif leading-none text-brand-secondary/15 sm:left-12 sm:-top-10 sm:text-[12rem]" aria-hidden="true">&ldquo;</span>
           <blockquote class="relative">
             <p class="text-lg font-medium leading-relaxed text-brand-dark sm:text-xl md:text-2xl">
               Smith Plumbing fixed our boiler on Christmas Eve when no one else would come out. Absolutely brilliant service.
             </p>
             <!-- Star rating -->
-            <div class="mt-5 flex items-center justify-center gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="mt-6 flex items-center justify-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-secondary" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <footer class="mt-4 text-base font-semibold text-gray-500">
+            <footer class="mt-5 text-base font-semibold text-gray-500">
               &mdash; Sarah T., Didsbury
             </footer>
           </blockquote>
@@ -277,34 +274,34 @@ import { siteConfig } from "../site.config";
   <CtaBanner />
 
   <!-- Areas We Cover -->
-  <section class="bg-brand-light py-16 sm:py-24">
+  <section class="bg-white py-20 sm:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Heading -->
       <div class="text-center">
-        <h2 class="text-3xl font-bold text-brand-dark sm:text-4xl">Serving All of Greater Manchester</h2>
-        <div class="mx-auto mt-3 h-1 w-12 rounded-full bg-brand-secondary"></div>
+        <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Serving All of Greater Manchester</h2>
+        <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-brand-secondary"></div>
       </div>
 
       <!-- Area tags -->
-      <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <div class="mt-12 flex flex-wrap justify-center gap-3">
         {[
           "Manchester City Centre", "Didsbury", "Chorlton", "Salford",
           "Stockport", "Altrincham", "Stretford", "Trafford",
           "Rochdale", "Oldham", "Bolton", "Bury",
         ].map((area) => (
-          <span class="rounded-full border border-brand-primary/15 bg-white px-5 py-2 text-sm font-medium text-brand-dark shadow-sm">
+          <a href="/areas" class="rounded-full border border-brand-primary/20 bg-brand-light px-6 py-2.5 text-sm font-semibold text-brand-dark shadow-sm transition-all duration-300 hover:border-brand-primary/40 hover:bg-brand-primary hover:text-white">
             {area}
-          </span>
+          </a>
         ))}
       </div>
 
       <!-- Footer text + link -->
-      <div class="mt-8 text-center">
+      <div class="mt-10 text-center">
         <p class="text-gray-600">
           Don't see your area? We probably cover it &mdash; give us a call.
         </p>
-        <a href="/areas" class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors hover:text-brand-secondary">
-          View All Areas <span>&rarr;</span>
+        <a href="/areas" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-all duration-300 hover:text-brand-secondary">
+          View All Areas <span class="transition-transform duration-300 hover:translate-x-1">&rarr;</span>
         </a>
       </div>
     </div>
